@@ -19,3 +19,11 @@
 
 * 참고
 - 강의 정리 사이트    https://minbook.tistory.com/7
+
+
+
+
+* 추천 사이트
+- MIT 자료               http://introtodeeplearning.com/
+- 논문                     https://arxiv.org/
+- 논문 + 코드           https://paperswithcode.com/
