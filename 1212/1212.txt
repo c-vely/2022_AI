@@ -1,0 +1,110 @@
+01_1212 (월) - *** 오준석
+- https://survivalcoding.com/
+
+*** 프로그램
+- 1주차 : 깃 IT 분야 버전 관리 
+- 2-3주차 : 자바ㅁ
+ 
+
+*** 이번주
+- WSL 깔아 두기 (리눅스)
+- 깃 교육 예정 
+ 
+
+** 기본 교육
+- 컴퓨터 간 대화를 주고 받는 규칙 중 하나 : http
+- + 보안 강화 : https
+- 서버는 하나, 클라이언트는 여러개
+- JSON 중요
+- 프레임워크 : 미리 만들어 놓은 블록 세트
+- 아키텍처 : 설계
+- DB : 정형화된 SQL, 비정형화된 NoSQL
+
+*** 깃 (협업)
+- 깃허브 사용법 숙지는 요즘 기본
+
+* 버젼이란? 
+- 참고   https://backlog.com/git-tutorial/kr/intro/intro2_4.html
+
+** 깃 설치
+- https://git-scm.com/
+
+* 깃 시작
+- git bash 클릭 > ls 라고 기입 엔터 > 전체 목록 보임 > git을 치면 관련 내용 보임
+
+* 깃 최초 설정
+- https://git-scm.com/book/ko/v2/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-Git-%EC%B5%9C%EC%B4%88-%EC%84%A4%EC%A0%95
+- 이름, 이메일 설정 후 확인하면 됨 (캡쳐 참조)
+
+**  vs code 설치
+- https://code.visualstudio.com/
+- 설치 후 깃에서 code .라고 입력하면 실행  됨 (캡쳐 참조)
+- 터미널 > 하단 + 버튼 옆 아래 화살표 클릭 > git bash 클릭
+- 
+
+** 깃허브 가입
+- 깃허브 실행    https://github.com/
+- 상단 오른쪽 + 아래 화살표 클릭 > New repository 클릭 > Creat Repository 클릭 > 원격 저장소 생성 완료
+
+*** vs code
+
+** 로컬 저장소 만들기    
+-https://backlog.com/git-tutorial/kr/intro/intro2_3.html
+ 
+* 작성
+- git --version
+- mkdir tutorial
+- cd tutorial
+- pwd
+- git init  --> 로컬 저장소 생성
+- ls -al
+
+** 파일 커밋
+- https://backlog.com/git-tutorial/kr/intro/intro2_4.html
+
+- code .   ---> vs code 새창 열림 (TUTORIAL)  > 새창에서 작업
+- 새 파일 > sample.txt 생성 > 아무거나 입력 > 터미널에 git status 입력 > git add sample.txt 입력 > git status >  git commit -m "<first commit>" > git status > git log > q (나가기)
+
+*** 정리
+// 로컬 저장소 생성
+git init
+
+//뭐가 파일 만들고 작업
+
+//현재 상태
+git status
+
+//버전 관리 대상으로 등록
+git add sample.txt
+
+//현재 상태
+git status
+
+//기록
+git  commit -m "<코멘트>"
+
+//현재 상태
+git status
+
+//커밋 이력 확인
+git log
+
+** 푸쉬하기 
+- vs code 터미널  git remote add origin https://github.com/c-vely/AI-2022.git 입력 > git branch > master인지 확인 > git push -u origin master > 브라우저 로그인 하면 됨. > 깃에서 새로고침 > sample.txt 파일 생성되어 있으면 성공
+
+- 집에서는 토큰을 쓰는 게 좋으나, 공용은 그냥 브라우저 로그인하기 
+
+** 이후 브랜치 공부는.... 여기서 ㅋㅋ
+- https://learngitbranching.js.org/?locale=ko
+
+*** 꿀팁
+- 깃의 contributor가 되면 그냥 뽑아감
+- 깃 활동을 통해 다양한 경험을 얼마나 하는가가 중요함
+
+*** 공모전
+- http://www.ai-idea.co.kr/mobile/list.asp?boardcode=notice&field=&keyword=&go=&page=1
+
+** 아이디어
+- 시각장애인을 위한  ' AI 도서 점자 번역기 '
+- 장애인, 노약자, 임산부 대상에 따른 지하철, 버스 빈자리 예약 서비스 (어디에 좌석이 위치해 있고, 어디에 엘리베이터 위치) 특정 대상을 위한 교통 안내 서비스
+- 다문화가정 번역 서비스

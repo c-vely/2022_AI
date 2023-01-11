@@ -1,0 +1,128 @@
+[Git]
+
+*** 복습
+- git을 잘 하면 회사에서 좋아함
+
+
+
+*** revert
+- https://backlog.com/git-tutorial/kr/stepup/stepup7_2.html
+
+
+
+*** Fork
+- 다른 사람의 저장소를 가져오는 방법
+- 깃허브 > 우측 상단 > Fork 클릭 > 내 특수저장소(c-vely)에 추가 > 끝(이제부턴 내 저장소)
+- 수정 후 > 깃허브 좌측 상단 pull requests > new request > creat pull request
+- 주인장은 > 확인하고 > merge 클릭 
+
+* 참고
+- Fork에 Fork를 할 수 없고, 1번만 가능. 아니면 fork한 것의 리모트 주소를 삭제하고 저장한 다음, 그걸 다른 사람이 포크해서 쓸 수는 있음.
+- Fork한 사람이 원본을 지우면 다 날라간다.
+
+
+
+*** fetch
+- pull이랑 비슷, pull은 다운까지 받고, fetch는 변경된 거 확인하지만 다운은 안 받음
+- git fetch
+
+
+
+*** diff
+
+
+
+*** .gitignore : 원격으로 보내지 않는 파일목록 지정
+- 파일을 만들어서 > 안에 필요 없는 환경 파일 이름 쓰기
+- 자동 생성   https://www.toptal.com/developers/gitignore
+
+* tips
+- .gitignore 잘 쓰면 좋음 
+- .gitignore는 여기저기 존재할 수 있음
+
+
+
+*** 기타 명령어
+- cherry pick : 다른 브랜치의 커밋을 복사할 때 씀
+- stash : 충돌을 해결하지 못할 거 같을 때, 임시 저장소에 저장하고, git pull을 하고, 임시 저장한 걸 불러와서 add하면 좋음
+
+
+
+*** stash : 누가 push하고 가서 내가 작업물을 임시 저장해야 할 때
+- git stash : 임시 저장
+- git stash apply : 저장한 거 불러오기
+
+
+
+
+[참고]
+
+*** 여러가지 도구
+- GitHub Desktop 좋은데 다른 환경을 지원 안하는 단점 있음               https://desktop.github.com/
+- SourceTree       암거나 다 쓸 수 있어서 좋음                               https://www.sourcetreeapp.com/
+- GitKraken         3개 호스팅 서비스를 선택가능, vs code랑 비슷         https://www.gitkraken.com/
+- Octotree          크롬 확장 프로그램, 깃허브 소스트리, 편함              https://chrome.google.com/webstore/detail/octotree-github-code-tree/bkhaagjahfmjljalopjnoealnfndnagc?hl=ko
+
+-> 현재 TOP3 :  소스트리, 깃허브 데스크탑, 깃크라켄
+
+
+
+* 참고
+- git best tools     https://blog.devart.com/best-git-gui-clients-for-windows.html
+
+
+
+*** 팔로우 추천
+- https://github.com/samchon
+
+
+
+*** IntelliJ (자바 개발 툴)
+- https://www.jetbrains.com/ko-kr/idea/download/#section=windows
+
+* tips
+- .gitignore 파일을 만들어서 거기에 필요없는 걸 써둔다. 
+
+
+
+*** chatGPT   https://openai.com/blog/chatgpt/
+- 명확한 주제를 가진 AI 만드는데 좋음
+
+
+
+*** 인공지능
+- MediaPipe
+- Yolo v7
+- Hugging Face
+
+
+
+*** 브랜치 전략
+
+** git flow    
+
+* 참고
+- 우아한 형제들    https://techblog.woowahan.com/2553/
+- https://onlyfor-me-blog.tistory.com/433
+- https://velog.io/@seongwon97/Git-Git-Flow-%EA%B0%9C%EB%85%90-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0
+
+
+
+
+*** 리눅스는?
+
+** WSL
+- WSL 설치해서 사용하라. 바탕은 우분투  
+
+** Ubuntu
+- 컴퓨터 > 검색창 > microsoft store > ubuntu 다운로드
+
+
+* 참고
+- https://learn.microsoft.com/ko-kr/windows/wsl/install
+
+
+
+*** 
+- 트위터는 외국 개발자가 많이
+- 한국 개발자는 보통 페이스북 하지만 인스타

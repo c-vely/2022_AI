@@ -1,0 +1,43 @@
+*** 브랜치 연습
+- https://learngitbranching.js.org/?locale=ko
+
+
+
+*** merge
+- 현 상태에 어떤 걸 가지고 오는 것
+
+
+
+*** rebase
+- 다른 놈보다 위에 올라가는 것
+- git rebase 브랜치 이름
+
+
+** 방법
+- 깃 저장소 1개를 2개의 다른 이름의 폴더를 만들어 연결한다. > git clone 주소 > code 폴더1, code 폴더 > 각각의 창을 연다
+-> 각 git pull을 한다 > 폴더1에서 파일을 수정하고 > git add . > git commit -m "코멘트"
+-> 폴더2에서 같은 파일에서 > git pull > 작업 시작
+
+-> 만일 폴더2에서 같은 파일을 pull하지 않고 수정하고 > git add . > git commit -m "코멘트" > git push > 충돌난다.
+
+-> 이때, rebase를 한다.
+- git rebase origin/master > 충돌나면  > 수정 후 > git add . > git rebase  --continue > esc키 > :wp (저장하고 나가기) > 순서대로 정리됨 확인
+-> git push
+
+
+
+*** git pull --no-rebase
+- 폴더 1에서 다른 파일을 만들고 > git add . > git commit -m "코멘트" > git push 
+-> 폴더 2에서 위와 같은 작업 > 충돌 일어남 (rejected) >   
+
+
+
+
+
+*** 협업 (같은 리모트 저장소를 복사하여, 수정하고 push해 보기)
+- 리모트 저장소 하나를 로컬 저장소를 만들어 clone을 한다. git clone https://github.com/junsuk5/namuwiki.git 폴더이름 > git pull
+- 수정하고 commit, push 하며 충돌 해결해 보기
+
+
+
+

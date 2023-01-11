@@ -1,0 +1,21 @@
+**** 작업 문서 만들기
+
+*** V Model
+
+
+* 참고
+-  소프트공학 V모델    https://krapoi.tistory.com/entry/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B3%B5%ED%95%99-V-%EB%AA%A8%EB%8D%B8-%EC%A7%84%ED%99%94%EC%A0%81-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4-%EB%AA%A8%EB%8D%B8Prototype-Model
+
+
+
+
+
+* tip
+- 소프트웨어 공학 공부 필요
+
+
+**** 딥러닝
+
+
+* 참고
+- 강의 정리 사이트    https://minbook.tistory.com/7

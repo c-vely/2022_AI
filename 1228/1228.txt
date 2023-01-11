@@ -1,0 +1,136 @@
+**** 상속
+- 중족적인 코드를 덜 쓰고, 부모가 가지고 있는 걸 내것처럼 쓰는 것이다.
+- 메소드 오버라이딩이 중요
+
+* Kind of 관계, IS-A 관계
+* Has-A 관계 
+* ULM
+- 시퀀스 다이어그램 
+- 유스케이스 다이어그램?
+- 클래스 다이어그램 : 클래스 도식화
+
+
+*** Super
+- this 는 내꺼 / super는 상소관계에서 부모껄 말함
+
+
+
+* tip.
+- Java는 단일 클래스만 상속 받을 수 있음
+- 2개씩에 대한 관계를 봐야한다.
+- 기본적으로 클래스는 오브젝트 클래스를 상소받는다. 즉. 오브젝트 클랙스의 멤버변수와 메소드를 내 것처럼 사용할 수 있음. 하지만 그 용어를 쓰지는 않는다. 항상 object가 상속관계에서 제일 위에 있기 때문이다.
+
+먼저, 
+1. 클래스 만들 줄 아고
+2. 멤버변수를 잘 정의할 줄 알고
+3. 메소드를 잘 쓸 수 있어야 하낟. 
+
+
+* 참고
+- kind of, IS-A 관계   https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=1ilsang&logNo=221104669002
+- IS-a / Has 관계   https://velog.io/@dhrod0325/Java%EC%9D%98-%EC%83%81%EC%86%8D-%EB%B0%8F-%EA%B5%AC%EC%84%B1Is-a-%EB%8C%80-Has-%EA%B4%80%EA%B3%84
+- ULM 다이어그램   https://velog.io/@khyunjiee/UML-Class-Diagram
+
+
+*** 실습
+
+** 객체
+- Employee
+- EmployeeMain
+- Manager
+
+** 상속
+- Manager01
+
+** 상속 수정
+- Manager02
+
+
+*tip.
+- 생성자는 객체가 생성될 때 초기화 담당
+- static만 공유, 나머지는 다 독립적
+
+
+**** 은닉성과 캡슐화
+- 변화에 둔감하게 만들어주기 위해
+- 직접적은 접근이 아니라 메소드를 이용해 접근하게 만들어야 한다. 
+
+
+**** 메소드 오버라이드 (다형성과 관련있음)
+- 상속관계에서 부모와 자식이 똑같은 이름을 가지고 있고, 자식이 그것을 재정의 하는 것 (메소드 재정의)
+
+*** 프로그래밍 주석 (Annotation)
+@Override
+
+*tip
+- 어노테이션을 스스로 만들어 사용할 수도 있음
+
+* 참고
+- 어노테이션   https://bangu4.tistory.com/199
+
+
+** 자동완성 기능
+- 기본생성자 : Source > Constructors from Superclass
+- 멤버변수 : Source > Constructors using Fields
+- 오버라이드 : Sourcd > Override/Implement Methods
+
+
+**** 패키지와 접근제한자
+
+*** 접근제한자
+
+* tip
+- 멤버변수 private, 메소드 public으로 설정하면 기본은 함 
+
+
+
+**** 객체의 형변환
+
+*** 형변환
+- 참조자료형의 객체끼리의 형변환
+
+** 묵시적 형변환
+- 상위 클래스 = 하위 클래스
+ex) Parent p = new Child()
+- 자식 객체가 만들어졌지만 접근은 부모 클래스만 가능
+- 단, 자식클래스에서 부모클래스의 메소드를 오버라이딩했다면 호출시, 자식클래스에서 재정의된 메소드가 호출된다. 
+
+
+** 명시적 형변환
+- 하위 클래스 = 상위 클래스 
+- 이미 묵시적 형변환이 된 후에, 자식에 있는 메소드를 쓰고 싶으때! 강제 형변환을 해서 접근해야할 때 사용.
+
+* tip
+- java에서 넣을 때, 묵시적 형변환. 때올때는 명시적 형변환을 쓴다. 
+
+
+
+**** 실습
+1) 랜덤하게 1~4사이의 값을 추출
+
+< 도형의 넓이 출력 프로그램 >
+1. 삼각형  2. 정사각형  3. 직사각형  4. 원
+도형 선택 : 3
+추출된 정수 : 3
+추출된 정수 2, 4인 경우
+	2 - 10사이의 정수를 한개만 추출하여 정사각형 또는 원의 넓이를 출력
+	ex) 가로, 세로 길이가 3인 정사각형의 넓이는 9이다.
+ 	     반지름이 10인 원의 넓이는 314.159200이다
+추출된 정수 1, 3인 경우
+	2 - 10사이의 정수를  2 개만 추출하여
+	ex) 밑변 3, 높이 3인 삼각형의 넓이는 3이다.
+	     가로 5, 세로 4인 직사각형의 넓이는 20이다.
+
+
+
+
+* 참고
+- 다단계 상속   https://lanera-austral.com/ko/how-to/564-how-to-create-multilevel-hierarchy-in-java-tutorial.html
+- 상속 유형   https://ko.myservername.com/types-inheritance-java-single-vs-multiple-inheritance
+- 초보자를 위한 JAVA 튜토리얼   https://ko.myservername.com/java-tutorial-beginners
+
+
+
+
+**** 다형성
+- 

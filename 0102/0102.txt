@@ -1,0 +1,315 @@
+**** 빅데이터 및 인공지능
+
+*** 빅데이터 개요
+** 직업군
+- 데이터 엔지니어 : 데이터 수집
+- 사이언티스트 : 통계로직 + 고객협상 (고객과 협상이 안되면 힘듬)
+- 플랫폼 엔지니어 : 설치 + 테스트 
+
+
+
+**** 데이터 환경 구축(아나콘다 / Jupyter lab)
+
+*** 프로그램 설치 전 다른 프로그램 삭제 꼭 필요
+- python 프로그램 제어 + C폴더 program File 에 폴더 있을시 삭제 + 환경변수 PATH도 확인 후 설정되어 있다면 삭제
+
+
+* tip
+- 개발환경 구축은 1년에 2번 정도 해야함. 느려지면 싹 밀고 다시 설정하고 해야함. 
+- 프로그램 버젼은 1년 전꺼가 좋음 ㅋㅋㅋ. 새 버전에는 되던 게 안 될 수도 있음. 
+
+
+
+*** 아나콘다 설치
+- https://www.anaconda.com/products/distribution
+- 환경 변수 설정 체크 꼭 하기
+
+
+
+*** 주피터 실행
+- cmd > jupyter lab > 실행
+
+
+*** 단축키
+- 실행 후 다음 칸 이동     shift + enter
+- 실행 후 정리  	       ctrl + enter
+- 위쪽에 셀 생성              a
+- 아래쪽에 셀 생성           b
+- 셀 합치기                     shift + m
+- 셀 나누기                     ctrl + shift + '-'
+- 셀 삭제                        dd
+- 자동완성                      '.' + Tab
+
+
+
+
+**** 자료형
+
+*** 변수 
+- 내용은 같은데.. 변수명만 봐도 잘 읽히도록 해야 한다. 
+- 처음부터 습관을 잘 가져야 한다. 
+- 단어 사이를 '_'로 구분할지, 대문자로 구별할지는 회사마다 다름
+
+1)
+price = 1000
+discount = 200
+discountedPrice = price - discount
+
+2)
+a=1000
+b=200
+c= a - b
+
+
+*** 수, 문자열, 리스트
+
+** 수
+
+* type( ) : 변수의 자료형 확인
+integerValue = 10
+floatValue = 20.5
+type(integerValue)
+
+* print( )
+plusAns = integerValue + floatValue
+minusAns = integerValue - floatValue
+multiAns = integerValue * floatValue
+dicAns = integerValue / floatValue
+print(plusAns)
+print(minusAns)
+print(multiAns)
+print(dicAns)
+
+
+* tip
+- 쥬피터는 맨 마지막 줄에 나온 것만 연산한다. 다 보고 싶다면, 명시적으로 print( )를 쓰면 된다. 
+
+
+
+** 실습
+1) 현재 시간과 분을 입력값으로 받아서 2개의 값을 더하는 연산을 수행해 보세요.
+------------------------------------------------
+from datetime import datetime
+
+now = datetime.now()
+min = now.minute
+sec = now.second
+
+result = min + sec
+print(result)
+-----------------------------------------------
+
+-----------------------------------------------
+currentHour = 13
+currentMin = 36
+answer = currentHour + currentMin
+print("현재 시간과 분의 합은 = {}".format(answer))
+
+-----------------------------------------------
+
+
+* 참고
+- 현재시간 분 가지고 오기   https://jsikim1.tistory.com/215
+- tap 자동완성이 안될 때   https://willow826.tistory.com/28
+
+
+** 문자열
+
+* 문자열 개수세기 : count( )
+* 문자열 위치확인 : index( )
+* 대소문자 구별함수 : upper( )  /  lower( )
+* 문자 치환 : replace( )
+* 문자 분리 : split( )
+
+
+** 리스트
+
+* 값 수정 : = 
+* 값 삭제 : .remove( )
+* 값 추가 : .append( )
+* 길이 구하기 : len( ) / min( ) / max( ) / sum( )
+* 개수 세기 : count( )
+* 요소 빼기(마지막 요소가 제거) : pop( )
+
+** 실습
+- [120, 150, 300, 500, 1000, 100, 2000]값에서 최소, 최대값을 뺀 평균을 average이름의 변수에 담으세요.
+-----------------------------------------------
+# 1)
+valueList = [120, 150, 300, 500, 1000, 100, 2000]
+minValue = min(valueList)
+maxValue = max(valueList)
+
+i = 0
+sumVal = 0
+cnt = 0
+
+while i < len(valueList) :
+    if valueList[i] != minValue and valueList[i] != maxValue :
+        sumVal += valueList[i] 
+        cnt += 1  
+    i += 1
+print(cnt)
+print(sumVal)
+average = sumVal / cnt
+print(average)
+-----------------------------------------------
+
+-----------------------------------------------
+# 2)
+valList = [120, 150, 300, 500, 1000, 100, 2000]
+minVal = min(valList)
+maxVal = max(valList)
+
+valList.remove(minVal)
+valList.remove(maxVal)
+
+print(valList)
+
+lenNum = len(valList)
+sumValue = sum(valList)
+average = sumValue / lenNum
+print(average)
+-----------------------------------------------
+
+-----------------------------------------------
+# 교수님)
+targetList = [120, 150, 300, 500, 1000, 100, 2000]
+
+# Step1: 최소값 최대값을 구한다
+minValue = min(targetList)
+maxValue = max(targetList)
+print(minValue, maxValue)
+
+# Step2: 리스트에서 최소값 최대값을 제거한다
+targetList.remove(minValue)
+targetList.remove(maxValue)
+targetList
+
+# Step3: 최종 리스트에서 평균을 구한다
+# 평균: 전체합 / 전체길이
+listSum = sum(targetList)
+listLen = len(targetList)
+
+answer = listSum / listLen
+print(answer)
+-----------------------------------------------
+
+
+
+**** 파이썬 문법
+
+*** 반복문
+
+** for
+
+1)
+-----------------------------------------------
+tvList = ["UN42001", "UN520001", "UN55001"]
+
+preFix = "LEDTV_"
+
+tvList[0] = preFix + tvList[0]
+
+tvList
+
+# Header : i를 0에서 2까지 반복하겠다.
+# 1)
+for i in range(0, 3):
+    # 반복 구문
+    tvList[i] = preFix + tvList[i]
+tvList
+-----------------------------------------------
+
+2)
+-----------------------------------------------
+tvListLen = len(tvList)
+for i in range(0, tvListLen):
+    # 반복 구문
+    tvList[i] = preFix + tvList[i]
+tvList
+-----------------------------------------------
+
+
+** while
+
+1)
+-----------------------------------------------
+# 반복문 while문 Header
+i = 0
+while ( i < len(tvList)):
+    # 반복 구문
+    tvList[i] = preFix + tvList[i]
+    i = i + 1
+tvList
+-----------------------------------------------
+
+
+
+*** 실습
+1)
+- tvList2 = ["UN40EN001", "UN40EN002", "UN40EN003", "UN40EN004"] 리스트가 출력되도록 하세요
+-----------------------------------------------
+tvList2 = ["UN40EN001", "UN40EN002", "UN40EN003", "UN40EN004"]
+
+print(tvList2)
+-----------------------------------------------
+
+2)
+- customerNumber 앞에 접두어 SEC_를 붙인다
+-----------------------------------------------
+import pandas as pd
+
+dataUrl = "https://raw.githubusercontent.com/hyokwan/python-lecture/master/dataset/customerdata.csv"
+csData = pd.read_csv(dataUrl)
+customerNumber = list( csData.CUSTID )
+
+preFix = "SEC_"
+for i in range(len(customerNumber)):
+    customerNumber[i] = preFix + customerNumber[i]
+customerNumber
+-----------------------------------------------
+
+3)
+- tvList3 = ["UN40EN001", "LEDTV_UN40EN002", "LEDTV_LEDTV_UN40EN003", "UN40EN004"] 리스트에서 LEDTV_가 한 개만 앞에 붙도록 하세요 (단, 대소문자 구분없이 전부 처리!!)
+-----------------------------------------------
+tvList3 = ["UN40EN001", "LEDTV_UN40EN002", "LEDTV_LEDTV_UN40EN003", "UN40EN004"]
+preFix = "LEDTV_"
+
+for i in range(len(tvList3)):
+    if tvList3[i].count(preFix) >= 2 :
+        tvList3[i] = tvList3[i].replace(preFix, "")
+        tvList3[i] = preFix + tvList3[i]
+    elif tvList3[i].count(preFix) == 1 :
+        pass
+    else:
+        tvList3[i] = preFix + tvList3[i]
+tvList3
+-----------------------------------------------
+
+
+
+
+**** 다음 시간
+
+4. 파이썬 문법
+- 반복문
+- 조건문
+- 함수
+
+5. 웹데이터 수집 (수요일쯤)
+
+
+
+
+* 참고
+- 파이썬 라이브러리   https://pypi.org/
+
+
+
+
+
+
+
+
+
+

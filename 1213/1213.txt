@@ -1,0 +1,36 @@
+*** 12/13 화
+- 요즘은 서비스를 생각해야 한다.
+
+
+
+*** git
+- git clone 경로 
+- git pull
+
+
+
+*** markdown 
+
+** 폰트 편집
+- https://gist.github.com/ihoneymon/652be052a0727ad59601
+- 연습 (캡쳐 2 참조)
+
+** 뱃지 만들기
+- https://velog.io/@cha-suyeon/github-%EA%B9%83%ED%97%88%EB%B8%8C-%EB%A6%AC%EB%93%9C%EB%AF%B8%EC%97%90%EC%84%9C-%EB%B1%83%EC%A7%80-%EB%A7%8C%EB%93%A4%EA%B8%B0
+- https://simpleicons.org/
+- 연습(캡쳐 4 참조)
+
+
+
+*** VMware
+- 리눅스 가상환경
+- 리눅스 공부하기!!!!!
+
+
+*** 저장소 추가 생성 및 푸시 연습
+- 기존 저장소에 파일을 업로드 하려면, 클론을 하고 파일 생성 후 커밋 푸쉬하면 됨
+- 새로 저장소를 파고 파일을 업로드 가능 하지만, 기존 저장소에 새로운 로컬 저장소를 만들어서 올리는 것은 안됨. 
+
+tip. 연습하기 ㅋㅋㅋ
+
+

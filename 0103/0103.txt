@@ -1,0 +1,47 @@
+**** 반복문 복습
+
+** 코드 리뷰
+--------------------------------------
+for i in range(len(nationList)):
+	if(i+1) % 2 != 0:
+		print(nationList[i])
+
+
+- i+1을 쓸 수 있으나, !=보다는 ==를 찾는 로직으로 짜는 것이 좋음
+-------------------------------------
+
+* tip
+- 무한 루프에 빠지면, 쥬피터 상단 Restart the kernel을 클릭하면 전체 초기화됨
+
+
+
+**** 조건문
+
+*** 실습
+- 4개의 아이템을 조건문을 활용하여 LEDTV_가 하나만 붙도록 한다.
+--------------------------------------------------------------------------------------
+tvList = ["LEDTV_LEDTV_UN40EN001", "UN40EN002", "LEDTV_UN40EN003",  "UN40EN004"]
+preFix = "LEDTV_"
+
+for i in range(len(tvList)):  
+    cnt = tvList[i].count(preFix) 
+    if cnt >= 2:
+        tvList[i] = tvList[i].replace(preFix,"")
+        tvList[i] = preFix + tvList[i]
+    elif cnt == 1:
+        pass
+    else:
+        tvList[i] = preFix + tvList[i]
+tvList
+--------------------------------------------------------------------------------------
+
+*** for문 디버깅
+1. 헤더를 주석처리한다
+2. 구문을 shift + tab으로 땡긴다
+3. i값을 별도로 선언한다
+
+
+
+* tip
+- 순서도를 사용하면 좋음   Drawio   https://app.diagrams.net/
+

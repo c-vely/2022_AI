@@ -1,0 +1,86 @@
+*** 이력서 확인
+- 아이콘 많이 쓰면 좋음
+
+
+
+*** git 연습
+
+
+
+*** reset
+-우측 소스제어 클릭 > 시간 아이콘 클릭 > Reset Current Branch to Commit > Hard Reset > 이전으로 돌아가는 것
+
+** reset 되돌리는 방법
+- https://da-nyee.github.io/posts/git-git-reset-git-reflog/
+
+
+
+*** branch
+- 참고   https://backlog.com/git-tutorial/kr/stepup/stepup1_1.html
+
+- git branch "이름" > git branch > 생성된 브랜치 확인 > git checkout 이름 > 브랜치로 이동함
+
+- 브랜치를 따로 쓰면, reset하면 다 지워지지만, 이걸 쓰면 나눠서 개발 후 합치기가 좋음
+
+
+** 연습
+- ㅜㅜ 잘 안되넹.. 흠...
+
+
+
+*** merge
+- git merge branch 합칠 브랜치 이름
+
+** 충돌 발생하면
+1. 원래를 살리거나
+2. 나중을 살리거나
+3. 둘을 합치거나
+
+
+** 해결 후
+- merge, commit, push
+- branch 삭제 : git branch -d bugfix
+
+** 중간에 가야하면, 
+- 먼저 브랜치를 올리며 됨. 
+
+
+
+*** 브랜치 연습
+- 그림 9번부터 참고~~~
+
+1. dev\git\ 에 먼저 test1214폴더를 만든다. 
+2. 깃허브에서 저장소 만든다.
+3. vs code에서 test1214폴더로 이동한다.
+4. git init > git remote add origin ..... 깃허브 저장소와 로컬 저장소의 test1214 폴더를 연결한다. > git remote -v > code ..
+5. 폴더에 파일을 추가한 후, git add . > git commit -m "코멘트" > git push -u origin master 한다
+6. git status > 1차 확인 > git log > 2차 확인 > 깃허브에서 새로고침 > 잘 반영되었는지 확인한다. 
+
+7. git branch 이름 > 가상 브랜치 만들고 >  git checkout 이름 > 가상 브랜치로 이동하여 작업한다.
+8. 작업 할때, git add . > git commit -m "코멘트" > 이렇게 2가지만 한다.
+9. git checkout master > 마스터 브랜치로 이동하여 > git merge 이름 > 으로 합친다.
+
+10-1. 충돌이 나면, 해결 후 > git add . > git commit -m "이름" > 해결 후 > git pull
+10-2. 충돌 없으면, git pull
+
+11. git add . > git commit -m "코멘트" > git push > 깃허브 반영되었는지 확인
+
+
+* tip.
+- 같은 마스터를 init하면 추후 push가 안된다. 이때는 그냥 숨긴항목 보기 하여, git이라고 적힌 것을 삭제한다.
+- dev폴더 아래 git 폴더를 만들어서 그 안에 매일 폴더를 만들어 작업하면 좋음
+- 폴더를 만들 때마다, 깃허브 저장소는 다시 만들어 1:1로 매칭해줘야 한다. 
+
+
+-u
+
+
+
+*** 굿 사이트
+- velog   https://velog.io/    
+- 오준선 velog   https://velog.io/@jsoh
+
+
+ 
+- ChatGPT 확장프로그램 좋음
+- Jira   https://www.atlassian.com/ko/software/jira?&aceid=&adposition=&adgroup=141040606729&campaign=17615715544&creative=607207009635&device=c&keyword=jira&matchtype=e&network=g&placement=&ds_kids=p71880517435&ds_e=GOOGLE&ds_eid=700000001558501&ds_e1=GOOGLE&gclid=EAIaIQobChMI2-Pj9cX4-wIVAqmWCh0o-AGrEAAYASAAEgIuXvD_BwE&gclsrc=aw.ds

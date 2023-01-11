@@ -1,0 +1,143 @@
+*** 참고 
+- 산업의 변화와 돈의 흐름을 아는 것이 필요하다.
+- 언어 1개잘 해서 시스템을 구축할 수만 있으면 된다. 
+- 회사는 실무적으로 잘 하는 사람을 원한다. 성적 좋은 사람 말고.
+
+
+*** 컴퓨팅 사고란? 
+
+** 실습 과제 1)
+1. 출근길 버스 요금 정리
+
+1) 버스
+- 서울 시내버스 체계   https://news.seoul.go.kr/traffic/archives/1706
+
+- 경로 : 창동 주공18단지 -> 정수 폴리텍  
+- 거리 : 총 17km
+- 비용 : 총 1400원
+- 교통카드 이용시 버스 기본요금 1200원
+-> 창동주공17단지 승차 (102) / 요금1200원 부과 
+-> 17코스 이동 후 미아리고개.미라이예술극장 하차 / 7.2km  / 추가요금 x
+-> 같은 장소에서 탑승 (143)   / 추가요금 x
+-> 15코스 이동 후 용산구청.크라운호첼 하차 / 17km / 200원 추가, 총 1400원 계산 됨
+
+
+* 참고
+- 대중교육 이용 수단 관계없이 이용거리에 비례하여 요금 부과 
+- 10km 이하는 기본요금
+- 환승시 : 기본요금(10km)까지 + 추가 5km마다 100원씩 추가요금
+- 환승시 추가요금은 이용교통수단 중 높은 기본요금을 적용
+
+- 하차시 카드단말기에 반드시 접촉(태그)해야 함
+- 하차후 30분 이내에 탑승해야 환승 가능 (저녁 9시~다음날 오전7시까지는 1시간 이내)
+- 4회 환승(5회 승차)까지는 환승으로 인정
+- 다인승 환승
+* 승차/하차/환승인원이 동일한 경우에만 적용
+* 지하철 환승은 불가
+
+- 유의사항
+* 동일차량/동일노선은 환승 적용 불가
+* 동일차량으로 재 탑승시 기본요금 부과
+
+
+2) 지하철 + 버스
+- 교통요금안내   https://news.seoul.go.kr/traffic/traffic_price
+
+ 경로 : 창동 주공18단지 -> 정수 폴리텍  
+- 거리 : 총 17km
+- 비용 : 총 1450원
+- 교통카드 이용시 지하철 기본요금 1250원
+-> 녹천역 승차 / 요금1250원 부과 
+-> 3코스 이동 후 석계역 6호선 환승 
+-> 14코스 이동 후 이태원역 하차 / 16km  / 200원 추가, 총 1450원 부과
+-> 이태원역.보광동입구 버스 탑승 (405, 421, 400)  / 추가요금 x
+-> 1코스 이동 후 한국폴리텍1대학 하차 / 17 km /추가요금 x, 총 1450원
+
+
+** 실습 과제 2)
+
+* 한 개만 설치된 엘리베이터에서 동작 절차를 정리해 보자. (가장 효율적으로 엘리베이터가 동작하려면?)
+- 세 가지 이상 상황 가정
+ex) 현재 엘리베이터 3층에 있음, 2층에서 올라가는 것 누름, 10층에서 내려가는 것 누름
+
+* 엘리베이터가 두 개 설치된 경우 통합 동작 절차를 정래해 보자.
+- 두 가지 이상 상황 가정
+ex) 현재 엘리베이터 A는 3층, B는 10층에 있음. 1층에서 올라가는 것 누름, 4층에서 내려가는 것 누름
+
+* tip
+- 인터넷에서 엘리베이터 알고리즘은 다양하게 소개되고 있음
+
+
+
+
+*** 자바
+
+** 설치
+
+* 자바
+- https://www.oracle.com/kr/java/technologies/downloads/#jdk19-windows
+- x64 Installer  다운로드 > 설치
+
+* 이클립스
+- https://www.eclipse.org/downloads/
+- 다운로드 > Eclipse IDE for Java Developers 설치
+
+
+
+
+*** 프로젝트
+- 기술 트렌드 : 새로운 알고리즘을 개발하는 것이 아닌, 오픈소스를 잘 가져와서 내 입맛에 맞게 잘 쓰는 능력이 중요
+- 유행에 맞게 부가가치를 얻을 수 있는 것을 계속 생각해야 한다. 지금은 AI를 활용한 무언가? 대기업이 만들어 좋은 것을 활용한 무언가?? 그걸 잘 활용하는 엔지니어. 
+- 즉, 핵심 기술이 뭔지? 나에게 얼마나 도움이 될지 그 고민을 해야하낟. 
+
+
+** 딥러닝 엔진 (AI 엔진)
+- 페이스북 -> 파이토치 -> Densepose (여러 명 가능)
+- 구글 -> MediaPipe (1명 인식)
+
+
+** Mediapipe : 사람 인체를 이용한 AI 솔루션 제공   https://google.github.io/mediapipe/
+- pose   https://google.github.io/mediapipe/solutions/pose.html
+- pose, hand, face   https://google.github.io/mediapipe/solutions/holistic.html
+- hair   https://google.github.io/mediapipe/solutions/hair_segmentation.html
+- Object Detection   https://google.github.io/mediapipe/solutions/object_detection.html
+- Box Tracking   https://google.github.io/mediapipe/solutions/box_tracking.html
+- Objectron(라이다센서 없이 3D로 인식 가능)   https://google.github.io/mediapipe/solutions/objectron.html
+
+* 설치
+- https://google.github.io/mediapipe/getting_started/install.html
+
+
+** Detection
+- Yolo   https://pjreddie.com/darknet/yolo/
+
+
+** 참고
+- https://github.com/gunpowder78/CMU-Perceptual-Computing-Lab-openpose
+
+
+
+*** 자바 실행
+- codepad   http://codepad.org/
+
+
+** 프로젝트 생성
+- new > Java project > 폴더 이름 입력 > finish
+- src 우클릭 > new > class > 이름 입력 > finish
+
+- 입력 ------------------------------------------------
+public static void main(String[] args) {
+		
+	}
+-------------------------------------------------------
+
+- Run as > Java Application 더블클릭 > 클래스 이름 > Run
+- 한글 깨질시, Run > Run Configration > Java Application > Common > Encoding > Use system encoding(x-windows-949) > Run
+
+
+** 실습) 영수증 만들어 보기
+
+
+**  
+
+
