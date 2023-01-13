@@ -32,5 +32,5 @@
 
 
 **** 케라스 
-- https://keras.io/
+- Keras API reference    https://keras.io/api/   (공부하면 좋음)
 
