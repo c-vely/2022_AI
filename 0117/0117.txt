@@ -1,0 +1,63 @@
+**** Samba
+
+*** 삼바 설치
+
+** 시도1) 네트워크 연결이 계속 안되는 문제 있음 ----> 싹 다 지우고 다시 설치 하기로 함
+- 리눅스 삼바설치    https://minddoodle.tistory.com/20
+- 설치 설정    https://inpa.tistory.com/entry/LINUX-%F0%9F%93%9A-%EC%82%BC%EB%B0%94SAMBA-%EC%84%A4%EC%B9%98-%EC%84%A4%EC%A0%95-%E2%80%BB-%EC%B4%9D%EC%A0%95%EB%A6%AC
+
+- smb.conf 수정방법 + IP확인   https://softtone-someday.tistory.com/9 
+- smbdir 설정    https://jhnyang.tistory.com/277
+- 설정 후 restart(ubuntu)   https://vhxpffltm.tistory.com/103
+
+- 삼바 아이피주소(학교)   \\192.168.98.128
+
+
+<문제>
+1. e: 문제를 바로잡을 수 없습니다. 망가진 고정 패키지가 있습니다.
+2. window 네트워크 액세스 거절
+3. windows 기능 오류코드: 0x800736B3
+4. 삼바 계정및 비번 변경
+
+<해결>
+1-1. https://willbesoon.tistory.com/105  ---> 하나하나 재 설치해기  ---> 그래도 안됨
+      https://jimnong.tistory.com/773  ---> root 가서 함  ---> ubuntu와서 재설치 하니 됨
+2.    https://studyforus.tistory.com/82  ---> 안됨
+      https://learn.microsoft.com/ko-kr/troubleshoot/windows-client/networking/cannot-access-shared-folder-file-explorer  ---> 안됨
+3.    https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=tepet&logNo=220790192802  ---> 해결
+4.    https://www.linux.co.kr/bbs/board.php?bo_table=lecture&wr_id=3070  ---> 비번변경 완료 341320
+      
+
+* 참고
+- 설치방법 기본    https://tothebest.tistory.com/37
+                         http://w3devlabs.net/wp/?p=19940
+- 18.04 설치         https://jjeongil.tistory.com/1492
+
+
+----> 다 안됨!!! 요거 따라해보기 https://webnautes.tistory.com/490
+
+
+
+https://inpa.tistory.com/entry/LINUX-%F0%9F%93%9A-%EC%82%BC%EB%B0%94SAMBA-%EC%84%A4%EC%B9%98-%EC%84%A4%EC%A0%95-%E2%80%BB-%EC%B4%9D%EC%A0%95%EB%A6%AC
+https://devji.tistory.com/entry/Ubuntu-2004-%EC%97%90-Samba-%EC%84%A4%EC%B9%98%ED%95%98%EC%97%AC-Windows%EC%97%90%EC%84%9C-%EC%97%B0%EA%B2%B0%ED%95%98%EA%B8%B0
+https://it-serial.tistory.com/entry/Linux-%EB%A6%AC%EB%88%85%EC%8A%A4-%EC%9C%88%EB%8F%84%EC%9A%B0-%ED%8C%8C%EC%9D%BC-%EA%B3%B5%EC%9C%A0-samba%EC%82%BC%EB%B0%94-%EC%84%9C%EB%B2%84-%E2%91%A0
+https://jjeongil.tistory.com/1492
+https://velog.io/@krystal_95/Ubuntu-Samba-%EC%84%A4%EC%B9%98-%EB%B0%8F-%EC%84%A4%EC%A0%95
+http://w3devlabs.net/wp/?p=19940
+https://studyforus.tistory.com/82
+https://ocsoosoo.tistory.com/148
+
+
+
+** 시도 2) 다시 ubuntu 재설치 후 samba intall 안 되는 같은 현상 발생 ---> 안 됨 !!! 으으으으으으으아아가가가가가가
+- https://jimnong.tistory.com/773 보면 따라 함
+- if) samba 설치 안되면 > https://willbesoon.tistory.com/105 > 하나하나 처리
+> su 이동 > https://jimnong.tistory.com/773 
+
+------> 으아아아아악~~~~~ 안돼!!!! 으아아아아악~~~~ ㅜㅜ
+
+
+
+** 시도 3)
+---> 유튜브 보고 따라해 보기    https://www.youtube.com/watch?v=6DIYjc03RXg
+
