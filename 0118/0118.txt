@@ -1,0 +1,43 @@
+**** 리눅스 이클립스 설치
+
+*** 설치
+- 설치 방법   https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=lee_seha&logNo=220344280075
+
+https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=lee_seha&logNo=220344280075
+https://jhnyang.tistory.com/221
+https://dohwa.tistory.com/entry/Ubuntu-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95
+https://www.dgmayor.com/202
+https://gaussian37.github.io/vision-opencv-linux_eclipse_c_opencv/
+https://www.google.com/search?q=%EB%A6%AC%EB%88%85%EC%8A%A4+eclipse-cdt+%ED%99%98%EA%B2%BD+%EC%84%A4%EC%B9%98&tbs=qdr:y&ei=gz7HY5PvBqPN2roP_ZKEsA8&start=30&sa=N&ved=2ahUKEwjTvPDM78_8AhWjplYBHX0JAfY4FBDy0wN6BAgGEAk&biw=1264&bih=817&dpr=0.9
+
+
+
+
+**** Mediapipe 설치
+*** 윈도우 pc + Mediapipe
+- https://google.github.io/mediapipe/getting_started/install.html#installing-on-windows
+
+*
+https://mseagle.tistory.com/m/113
+https://dev-jinee.tistory.com/21
+
+* 파이썬으로 설치
+https://blog.naver.com/PostView.naver?blogId=chandong83&logNo=222472645564&categoryNo=81&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1&from=postView
+https://brunch.co.kr/@fermat39/125
+
+
+*** 우분투 + Mediapipe
+- https://webnautes.tistory.com/1404
+
+
+
+
+**** 참고
+* Qt
+- https://www.facebook.com/groups/cppkorea/posts/1492453177594313/
+공유한 Qt 프로그래밍 서적 PDF가 업데이트 되었습니다. 
+아래 사이트에 가시면 Qt 프로그래밍 PDF 문서와 예제 소스코드를 다운로드 받을 수 있습니다.
+다운로드 URL 1 : github.com/eddykim777/qtbook
+다운로드 URL 2 : qt-dev.com
+New Release Version : 1.5
+- 업데이트 내용: 교정, 목차 그리고 IPC장 변경

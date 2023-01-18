@@ -61,3 +61,28 @@ https://ocsoosoo.tistory.com/148
 ** 시도 3)
 ---> 유튜브 보고 따라해 보기    https://www.youtube.com/watch?v=6DIYjc03RXg
 
+
+* VMware (리눅스)에 윈도우 설치
+- 윈도우 설치 방법   https://avada.tistory.com/1613
+- 윈도우   https://www.microsoft.com/ko-kr/software-download/windows10
+- 윈도우 엔터프라이즈   https://www.microsoft.com/ko-kr/evalcenter/download-windows-10-enterprise
+
+
+* Server 설치 완료
+
+
+* Server(B) 설치
+<문제>
+1. VMware Server(B) ping: www.google.com: Temporary failure in name resolution
+
+<방안>
+1. 
+- https://ko.linux-console.net/?p=329#gsc.tab=0  ---> 안 됨
+- https://blog.itcode.dev/posts/2021/09/04/firewall-with-ufw  ---> 해결 안됨
+
+<해결>
+1. cd /etc/netplan > nano 00-installer-config.yaml 수정시 글자 오타 있어 수정함.  ---> 다시 하니 잘됨. 휴우~~~
+
+
+* Client 설치
+

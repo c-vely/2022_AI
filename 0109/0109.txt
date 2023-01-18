@@ -20,7 +20,8 @@
 
 
 **** 설치
-- VMware    https://www.vmware.com/kr/products/workstation-player/workstation-player-evaluation.html
+- VMware player  https://www.vmware.com/kr/products/workstation-player/workstation-player-evaluation.html
+- VMware pro      https://www.vmware.com/kr/products/workstation-pro/workstation-pro-evaluation.html
 - Ubnatu 64-bit PC (AMD64) desktop image(Server 용)     https://mirror.kakao.com/ubuntu-releases/18.04/
             64-bit PC (AMD64) server install image(Server(B)용)   
 - Kubuntu-18.04.5-desktop-amd64.iso(Client 용)              https://ftp.kaist.ac.kr/ubuntu-cdimage/kubuntu/releases/18.04/release/
