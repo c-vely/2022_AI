@@ -62,6 +62,10 @@ https://ocsoosoo.tistory.com/148
 ---> 유튜브 보고 따라해 보기    https://www.youtube.com/watch?v=6DIYjc03RXg
 
 
+**** [이것이 우분투 리눅스다] 따라하기
+
+*** 가상환경 재구축
+
 * VMware (리눅스)에 윈도우 설치
 - 윈도우 설치 방법   https://avada.tistory.com/1613
 - 윈도우   https://www.microsoft.com/ko-kr/software-download/windows10
@@ -69,7 +73,6 @@ https://ocsoosoo.tistory.com/148
 
 
 * Server 설치 완료
-
 
 * Server(B) 설치
 <문제>
@@ -83,6 +86,20 @@ https://ocsoosoo.tistory.com/148
 <해결>
 1. cd /etc/netplan > nano 00-installer-config.yaml 수정시 글자 오타 있어 수정함.  ---> 다시 하니 잘됨. 휴우~~~
 
-
 * Client 설치
 
+
+
+*** 개념과 명령어 공부
+
+* cron
+<문제>
+1. 백업시간 변경 후 ls -l /backup으로 확인하였으나 0으로 나옴
+
+<해결>
+1. ls -al /backup 하면 확인 가능
+
+
+
+*** 삼바 설치
+- 따라하니 성공!!!! 휴우~~~~

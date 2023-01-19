@@ -1,4 +1,6 @@
 **** 리눅스 이클립스 설치
+① 리눅스 상에서 C언어 컴파일 IDE 환경인 Eclipse-CDT 환경을 설치하시오
+
 
 *** 설치
 - 설치 방법   https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=lee_seha&logNo=220344280075
