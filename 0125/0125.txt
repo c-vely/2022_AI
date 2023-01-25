@@ -1,0 +1,90 @@
+[추천 회사]
+- 바이온 에버
+
+
+
+[리눅스] 5장. 
+
+*** mount
+- df -h
+
+
+
+*** Samba
+
+* 참고
+- 18.04   https://makepluscode.tistory.com/98
+- 20.04   https://devji.tistory.com/entry/Ubuntu-2004-%EC%97%90-Samba-%EC%84%A4%EC%B9%98%ED%95%98%EC%97%AC-Windows%EC%97%90%EC%84%9C-%EC%97%B0%EA%B2%B0%ED%95%98%EA%B8%B0
+
+---> 흠.. 이상하게 네트워크 연결이 안 됨!!! 
+
+---> 이것이 우분투 리눅스다 처럼 하면 잘 됨. ㅋㅋ PASS
+
+
+
+[리눅스] 6장
+
+*** c 프로그램
+-> Client 
+-> sudo apt install gcc > y
+-> sudo apt install gedit > y
+-> sudo apt install make
+-> gedit hello.c > 입력 > 저장 > 닫기
+
+#include <stdil.h>
+
+int main()
+{
+	printf("hello world\n");
+}
+
+-> 1) gcc ./hello.c > ./a.out > 실행 결과 출력 (기본 실행파일 생성)
+-> 2) gcc -o hello ./hello.c > ./hello > 실행 결과 출력 (지정 실행파일 생성)
+
+
+** Makefile 생성 후 2개 파일 1번에 실행
+-> gedit Makefile > 입력 > 저장 > 닫기
+
+CC = gcc
+test : file1.o file2.o
+	gcc -o test file1.o file2.o
+file1.o : file1.c
+	gcc -c -o file1.o file1.c
+file2.o : file2.c
+	gcc -c -o file2.o file2.c
+clean :
+	rm *.o test
+
+-> gedit file1.c > 입력 > 저장 > 닫기
+
+#include <stdil.h>
+extern void file2.func();
+int main()
+{
+	printf("File1\n");
+}
+
+-> gedit file2.c > 입력 > 저장 > 닫기
+
+#include <stdil.h>
+void file2_func()
+{
+	printf("File2\n");
+}
+
+-> make clean > make > ./test > 출력
+
+
+
+*** Eclipse-CDT 설치 & 실행
+/home/ubuntu/다운로드
+
+- 이클립스 실행까지   https://linuxconfig.org/eclipse-ide-for-c-c-developers-installation-on-ubuntu-22-04    ---> 이거 대로 따라하면 됨
+- 이크립스 cdt 설치    https://jayden-ji.tistory.com/93
+
+* 참고
+- http://www.globaltek.kr/how-to-install-ubuntu-eclipse-c/
+
+
+* tip
+- 이클립스는 자동으로 makefile이 만들어 진다. 허나 가끔 오류가 생기는 경우가 있어, 어떻게 만드는지 알고 있어야 한다. 
