@@ -1,0 +1,67 @@
+[Mediapipe]
+
+**** window에 설치
+- https://blog.naver.com/PostView.naver?blogId=chandong83&logNo=222472645564&categoryNo=81&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1&from=postView
+- https://mseagle.tistory.com/m/113  ---> 이거보고 하기
+
+
+
+* 참고
+- bazel설치   https://younginshin115.github.io/tutorial/1-tutorial-bazel-windows-installation/
+- bazel         https://bazel.build/configure/windows?hl=ko  ---> 이거 참고
+
+
+
+<명령어>
+- bazel build -c opt --define MEDIAPIPE_DISABLE_GPU=1 --action_env PYTHON_BIN_PATH="C:/Users/<PC17>/AppData/Local/Programs/Python/Python311/python.exe" mediapipe/examples/desktop/hello_world
+
+
+<문제>
+1. 'bazel'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는 배치 파일이 아닙니다.  --> bazel. 실행 안됨
+2. 위 명령어 실행하니 작업 실패 함
+WARNING: Download from http://mirror.tensorflow.org/github.com/bazelbuild/rules_closure/archive/cf1e44edb908e9616030cc83d085989b8e6cd6df.tar.gz failed: class java.io.FileNotFoundException GET returned 404 Not Found
+WARNING: Download from https://storage.googleapis.com/mirror.tensorflow.org/github.com/tensorflow/runtime/archive/8700849191dea2ca9c12a3d26ec41fac0814671b.tar.gz failed: class java.io.FileNotFoundException GET returned 404 Not Found
+WARNING: Download from https://storage.googleapis.com/mirror.tensorflow.org/github.com/llvm/llvm-project/archive/131dda9acc6978aba4740d75ca45f411fbabd726.tar.gz failed: class java.io.FileNotFoundException GET returned 404 Not Found
+
+ERROR: C:/users/pc17/_bazel_pc17/ucagf2ka/external/bazel_tools/platforms/BUILD:19:6: in alias rule @bazel_tools//platforms:x86_64: Constraints from @bazel_tools//platforms have been removed. Please use constraints from @platforms repository embedded in Bazel, or preferably declare dependency on https://github.com/bazelbuild/platforms. See https://github.com/bazelbuild/bazel/issues/8622 for details.
+ERROR: C:/users/pc17/_bazel_pc17/ucagf2ka/external/bazel_tools/platforms/BUILD:19:6: Analysis of target '@bazel_tools//platforms:x86_64' failed
+ERROR: C:/users/pc17/mediapipe/mediapipe/examples/desktop/hello_world/BUILD:19:10: While resolving toolchains for target //mediapipe/examples/desktop/hello_world:hello_world: Target @local_execution_config_platform//:platform was referenced as a platform, but does not provide PlatformInfo
+ERROR: Analysis of target '//mediapipe/examples/desktop/hello_world:hello_world' failed; build aborted:
+INFO: Elapsed time: 121.211s
+INFO: 0 processes.
+FAILED: Build did NOT complete successfully (7 packages loaded, 8 targets configured)
+
+3. 수정 후 다시 명령어 실행
+FATAL: corrupt installation: file 'C:\Users\PC17\_bazel_PC17\install\5cf243cc1c78366ef21cb0356ce718eb\embedded_tools\platforms\BUILD' is missing or modified.  Please remove 'C:/Users/PC17/_bazel_PC17/install/5cf243cc1c78366ef21cb0356ce718eb' and try again.
+
+4. 다시 명령어 실행
+ERROR: C:/users/pc17/_bazel_pc17/ucagf2ka/external/bazel_tools/platforms/BUILD:89:6: in alias rule @bazel_tools//platforms:windows: Constraints from @bazel_tools//platforms have been removed. Please use constraints from @platforms repository embedded in Bazel, or preferably declare dependency on https://github.com/bazelbuild/platforms. See https://github.com/bazelbuild/bazel/issues/8622 for details.
+ERROR: C:/users/pc17/_bazel_pc17/ucagf2ka/external/bazel_tools/platforms/BUILD:89:6: Analysis of target '@bazel_tools//platforms:windows' failed
+ERROR: C:/users/pc17/mediapipe/mediapipe/examples/desktop/hello_world/BUILD:19:10: While resolving toolchains for target //mediapipe/examples/desktop/hello_world:hello_world: Target @local_execution_config_platform//:platform was referenced as a platform, but does not provide PlatformInfo
+ERROR: Analysis of target '//mediapipe/examples/desktop/hello_world:hello_world' failed; build aborted:
+INFO: Elapsed time: 2.735s
+INFO: 0 processes.
+FAILED: Build did NOT complete successfully (7 packages loaded, 8 targets configured)
+
+
+
+<해결>
+1. https://forbes.tistory.com/1157  ---> C:에 있는 bazel > User\PC17로 가져와서 > 환경변수 user PATH 수정
+2. https://stackoverflow.com/questions/62075803/bazel-target-platforms-oswindows-was-referenced-as-a-platform-but-does-not-p  ---> BUILD 파일,  맨 아래 삽입  ---> 4번문제 발생하여 다시 확인하니, 수정되어 있지 않음. 원본 상태!! 
+
+platform(
+    name = "windows_x86_64",
+    constraint_values = [
+       "@platforms//cpu:x86_64",
+       "@platforms//os:windows",
+    ],
+)
+3. C:/Users/PC17/_bazel_PC17/install/5cf243cc1c78366ef21cb0356ce718eb  ---> 폴더 삭제후 재시작 
+
+
+
+
+
+**** ubuntu에 설치
+- https://webnautes.tistory.com/1404
+- https://swiftcam.tistory.com/426
