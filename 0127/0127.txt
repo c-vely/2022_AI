@@ -1,0 +1,81 @@
+[Mediapipe]  ---> 01/26에 이어서 작업 중...
+
+- https://mseagle.tistory.com/m/113  ---> 이거 참고해서 진행 중 (마지막 단계에서 계속 오류 뜸)
+
+<문제>
+1. cmd > bazel build -c opt --define MEDIAPIPE_DISABLE_GPU=1 --action_env PYTHON_BIN_PATH="C:/Users/<PC17>/AppData/Local/Programs/Python/Python311/python.exe" mediapipe/examples/desktop/hello_world > 입력시 오류
+ERROR: C:/users/pc17/_bazel_pc17/ucagf2ka/external/bazel_tools/platforms/BUILD:89:6: in alias rule @bazel_tools//platforms:windows: Constraints from @bazel_tools//platforms have been removed. Please use constraints from @platforms repository embedded in Bazel, or preferably declare dependency on https://github.com/bazelbuild/platforms. See https://github.com/bazelbuild/bazel/issues/8622 for details.
+ERROR: C:/users/pc17/_bazel_pc17/ucagf2ka/external/bazel_tools/platforms/BUILD:89:6: Analysis of target '@bazel_tools//platforms:windows' failed
+ERROR: C:/users/pc17/mediapipe/mediapipe/examples/desktop/hello_world/BUILD:19:10: While resolving toolchains for target //mediapipe/examples/desktop/hello_world:hello_world: Target @local_execution_config_platform//:platform was referenced as a platform, but does not provide PlatformInfo
+ERROR: Analysis of target '//mediapipe/examples/desktop/hello_world:hello_world' failed; build aborted:
+INFO: Elapsed time: 2.135s
+INFO: 0 processes.
+FAILED: Build did NOT complete successfully (7 packages loaded, 8 targets configured)
+
+2. 자바홈 환경변수 설정했더니 bazel이 없다고 나옴
+
+3. 
+
+
+
+
+<방안>
+1. 
+1) 자바홈 환경변수 설정 
+- 자바홈 환경변수 설정   https://coding-factory.tistory.com/838
+
+2) bazel 버젼 5.2.0으로 변경
+- 다운로드   https://github.com/bazelbuild/bazel/releases?q=5.2.0&expanded=true
+- 이름변경   https://younginshin115.github.io/tutorial/1-tutorial-bazel-windows-installation/#2-bazel-%EC%8B%A4%ED%96%89%ED%8C%8C%EC%9D%BC-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C
+
+3) python 3.9 버젼으로 변경
+
+
+2. bazel 환경변수 c:로 변경   ---> 다시 됨. 그런데 문제1과 같은 오류 동일함.
+
+
+
+
+
+
+[리눅스] 8장. 원격접속서버
+
+- 이것이 우분투 리눅스다 8장 인강 따라하기
+
+
+*** 텔넷 서버 설치 (Server)
+
+-> dpkg -l telnetd > 패키지 설치 여부 확인
+-> 미설치 시 > apt-get -y install xinetd telnetd > 패키지 설치
+-> cd /etc/xinetd.d/ > 폴더 이동
+-> gedit telnet > 내용 입력 >
+
+service telnet
+{
+	disable = no
+	flags = REUSE
+	socket_type = stream
+	wait = no
+	user = root
+	server = /usr/sbin/in.telnetd
+	log_on_failure += USERID
+}
+
+-> adduser teluser > 설정
+
+
+*** 텔넷 클라이언트 설치  (WinClient)
+
+
+
+** putty 다운 및 설치 & 접속
+- 다운로드    https://cafe.naver.com/thisislinux
+
+
+
+*** OpenSSH
+
+
+
+
+*** XRDP

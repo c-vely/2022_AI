@@ -2,7 +2,7 @@
 
 **** window에 설치
 - https://blog.naver.com/PostView.naver?blogId=chandong83&logNo=222472645564&categoryNo=81&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1&from=postView
-- https://mseagle.tistory.com/m/113  ---> 이거보고 하기
+- https://mseagle.tistory.com/m/113  ---> 이거보고 하기 (opencv 3.4.10)
 
 
 
@@ -42,7 +42,6 @@ ERROR: Analysis of target '//mediapipe/examples/desktop/hello_world:hello_world'
 INFO: Elapsed time: 2.735s
 INFO: 0 processes.
 FAILED: Build did NOT complete successfully (7 packages loaded, 8 targets configured)
-
 
 
 <해결>
