@@ -12,6 +12,9 @@
 - bazel 5.2.0
 - jdk 19
 
+<결론>
+- 모르겠음 잘 안됨. 그냥 파이썬 미디어파이프 설치해서 해봐야겠음.
+
 
 
 {python으로 실행}
@@ -20,13 +23,26 @@
 - https://yunwoong.tistory.com/90
 
 
+- Hands tracking
+
 <문제>
 1. INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
 [ERROR:0@0.496] global obsensor_uvc_stream_channel.cpp:156 cv::obsensor::getStreamChannelGroup Camera index out of range
 
 
-<방안>
-1. 
+<해결>
+1. 캠 인식이 안되서 안 됐던 것임. 프로그램 껐다 켜고 캠 연결 먼저 하니 잘 됨
+
+
+
+*** toy project 준비
+
+* 아이디어
+- 
+
+* 참고
+- 가운데 손가락만 모자이크처리   https://velog.io/@dlth508/Toy-Project-%EA%B0%80%EC%9A%B4%EB%8D%B0-%EC%86%90%EA%B0%80%EB%9D%BD-%EB%AA%A8%EC%9E%90%EC%9D%B4%ED%81%AC-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%A7%8C%EB%93%A4%EA%B8%B0
+
 
 
 
