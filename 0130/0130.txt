@@ -1,0 +1,80 @@
+[Mediapipe]  ---> 01/27에 이어서 작업 중...
+- MediaPipe    https://google.github.io/mediapipe/
+
+
+
+{window 설치}
+- https://mseagle.tistory.com/m/113  ---> 이거 참고해서 진행 중 (마지막 단계에서 계속 오류 뜸)
+
+* 개발 환경
+- python 3.9.13
+- opencv 3.4.10
+- bazel 5.2.0
+- jdk 19
+
+
+
+{python으로 실행}
+- https://eteo.tistory.com/7
+- https://blog.naver.com/PostView.naver?blogId=chandong83&logNo=222472645564&categoryNo=81&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1&from=postView
+- https://yunwoong.tistory.com/90
+
+
+<문제>
+1. INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+[ERROR:0@0.496] global obsensor_uvc_stream_channel.cpp:156 cv::obsensor::getStreamChannelGroup Camera index out of range
+
+
+<방안>
+1. 
+
+
+
+
+
+[회사]
+- 개발 + 기획도 아는 사람 선호
+
+
+
+[RFP]  제안요청서
+- 문체부 > 콘텐츠진흥원   https://www.kocca.kr/kocca/main.do
+
+
+* 참고
+- 작성요령    https://www-goalmoneyhappydiffusion-com.tistory.com/entry/RFP%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80-%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD-%EC%9E%91%EC%84%B1-%EC%9A%94%EB%A0%B9-%ED%8F%AC%ED%95%A8
+
+* tip
+- 개발하자 기술영업 해봐도 좋다 ㅋ
+- RFP를 보는 모습을 보여주면, 다른 곳으로 옮겨갈 수도 있음. 이런 것을 구성 해보는 게 중요함.
+- 회사에서 이렇게까지 하는 사람이 없다.
+- 전체를 보면서 개발을 할 수 있는 게 정체되지 않고 발전할 수 있게 만든다. 
+
+
+<RFP 작성하기>
+- 1장짜리 만들기
+
+<UX 작성하기>
+- 카카오오븐    https://ovenapp.io/        ---> 쉬움
+- 피그마         https://www.figma.com/   ---> 요즘 이게 핫함 (회의하면서 수정하기 편함)
+
+* tip
+- RFP + UX까지 만들어서 보여주면 좋아할 거다. 이렇게까지 하는 사람은 회사에도 없다. 이게 포트폴리오다
+
+
+
+** 과제
+- 화요일까지 만들어 보기
+- RFP + UX 만들기
+
+
+
+[개발]
+- 깃 관리하는 이유는 버젼관리, 안정선, 보안성
+- Jira Software    https://www.atlassian.com/software/jira?&aceid=&adposition=&adgroup=140479881566&campaign=18442480203&creative=639487383325&device=c&keyword=jira%20software&matchtype=e&network=g&placement=&ds_kids=p73335832038&ds_e=GOOGLE&ds_eid=700000001558501&ds_e1=GOOGLE&gclid=EAIaIQobChMIna6115ju_AIV5tdMAh1JcwChEAAYASAAEgKXZ_D_BwE&gclsrc=aw.ds
+
+
+* 참고
+- 개발도 중요한데, 내부적으로 처리해야할 업무를 잘 처리하는 것도 개발 잘하는 것에 포함된다. (일머리가 있어야 한다)
+- 대기업은 중간 관리하는 사람이 있지만, 중소기업은 개발 + 관리까지 가능하면 좋아함.
+- 하던 거 보여주는 게 제일 좋음

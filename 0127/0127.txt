@@ -14,7 +14,6 @@ FAILED: Build did NOT complete successfully (7 packages loaded, 8 targets config
 
 2. 자바홈 환경변수 설정했더니 bazel이 없다고 나옴
 
-3. 
 
 
 
@@ -29,6 +28,7 @@ FAILED: Build did NOT complete successfully (7 packages loaded, 8 targets config
 - 이름변경   https://younginshin115.github.io/tutorial/1-tutorial-bazel-windows-installation/#2-bazel-%EC%8B%A4%ED%96%89%ED%8C%8C%EC%9D%BC-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C
 
 3) python 3.9 버젼으로 변경
+- python 3.9.13으로 변경함
 
 
 2. bazel 환경변수 c:로 변경   ---> 다시 됨. 그런데 문제1과 같은 오류 동일함.
@@ -40,7 +40,8 @@ FAILED: Build did NOT complete successfully (7 packages loaded, 8 targets config
 
 [리눅스] 8장. 원격접속서버
 
-- 이것이 우분투 리눅스다 8장 인강 따라하기
+- 이것이 우분투 리눅스다 8장 인강 따라하기  ---> 따라하면 잘 됨
+
 
 
 *** 텔넷 서버 설치 (Server)
