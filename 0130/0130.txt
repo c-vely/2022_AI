@@ -23,7 +23,7 @@
 - https://yunwoong.tistory.com/90
 
 
-- Hands tracking
+** Hands tracking
 
 <문제>
 1. INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
@@ -32,6 +32,7 @@
 
 <해결>
 1. 캠 인식이 안되서 안 됐던 것임. 프로그램 껐다 켜고 캠 연결 먼저 하니 잘 됨
+
 
 
 

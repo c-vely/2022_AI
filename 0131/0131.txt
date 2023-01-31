@@ -1,0 +1,57 @@
+[Mediapipe]  ---> 01/30에 이어서 작업 중...
+- MediaPipe    https://google.github.io/mediapipe/
+
+** Face tracking   ---> 잘 됨. 어떤 툴로 작업할지 결정 필요
+- https://google.github.io/mediapipe/solutions/face_mesh   
+
+
+
+
+[ 토이 프로젝트]
+
+* 아이디어
+- 사업명 : 체감형 XR콘텐츠 및 심리상담 기반 마음(번아웃) 인식 프로그램 개발
+
+
+* 대상
+- 번 아웃인지 모르는 사람을 위한 자기인식 xr 프로그램 
+
+* 필요 기술
+- 사용자 손 인식  ---> 장막 걷기 + 막의 표면 제거하기 + 방울 이동시켜 합치기
+- 사용자 표정 인식  ---> 사용자 상태 확인 (다음 진행 대사 선택)
+- 사용자 얼굴만 복사해서 붙이기  ---> 아이의 얼굴에 사용자의 얼굴 복사
+
+
+* UI
+- 도움
+- 시작
+- 다음
+- 이전
+- 
+
+* 사전 이용 안내 (????)   ---> 모르것음
+- 안녕하세요. 요즘 어떻게 지내세요?   ---> 표정 인식 (다음 대사 선택)
+- 표정을 보니 이게 뭔가 하는 것처럼 보이는데, 걱정마세요. 다 잘 될거예요. 
+- 자신의 스트레스를 여기에 털어 버리세요.   ---> 터는 수준에 따라 스트레스가 바닥으로 쏟아진다.   ---> AR이 나을까? VR이 나을까? 흠...
+- 사용자의 스트레스 지수가 표시 됨   ---> 스트레스 지수 평가 프로그램 필요
+- 사용자의 스트레스 지수만큼 공이 방 안으로 쏟아져 들어옴
+
+
+
+<발표>
+- 개발 개요도 수정하면 좋겠음
+
+
+
+
+<참고>
+* 모자이크
+- 가운데 손가락만 모자이크처리    https://velog.io/@dlth508/Toy-Project-%EA%B0%80%EC%9A%B4%EB%8D%B0-%EC%86%90%EA%B0%80%EB%9D%BD-%EB%AA%A8%EC%9E%90%EC%9D%B4%ED%81%AC-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%A7%8C%EB%93%A4%EA%B8%B0
+
+* face swap
+- 딥페이크    https://sjblog1.tistory.com/34
+- opencv    https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=honglabcokr&logNo=221479088290
+- c++/python    https://learnopencv.com/face-swap-using-opencv-c-python/
+
+* XR
+- 개요    https://blogs.nvidia.co.kr/2022/06/14/what-is-extended-reality/
