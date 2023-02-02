@@ -1,0 +1,98 @@
+[상담]
+
+*** 김형오 교수 (성남 폴리텍)
+- 010-4570-5193
+
+- 우선, 전문학사라도 가지고 있는게 좋을 듯
+- 하나 하나 해보고, 교수들한테 물어보고 요청하라
+- 전기 기능사, 생산자동화기사 정도는 준비하는 게 공부도 되고 좋을 거 같다.
+- 대학원은 학위 말곤 연구하기 어렵다. 직접 해보는 게 더 좋을 듯
+- 청계천 가서 직접 부품 보면서 그렇게 배워나가는 게 좋음
+
+
+
+** 생산자동화 산업기사
+- http://www.q-net.or.kr/crf005.do?id=crf00505&gSite=Q&gId=&jmCd=2034&examInstiCd=1
+
+** 전기 기능사
+- http://www.q-net.or.kr/crf005.do?id=crf00505&gSite=Q&gId=&jmCd=7780&examInstiCd=1
+
+
+
+[유니티]
+- 최신 버젼 설치
+
+- 비주얼 스튜디오 커뮤니티 설정    https://learn.microsoft.com/ko-kr/visualstudio/gamedev/unity/get-started/getting-started-with-visual-studio-tools-for-unity?pivots=windows
+
+
+
+
+[자연어 처리] NLP
+- 자연어 처리 : 자연어를 컴퓨터가 해독하고 그 의미를 이해하는 기술
+* 접근법
+  1. Symbolic approach
+    - 규칙/지식 기반,   
+  2. Statistical approach
+    - 확률/통계 기반, TF-IDF를 이용한 키워드 추출(중요함)
+* 전처리 (제일 중요)
+- 개행문자 제거, 특수문자 제거, 공백 제거, 중복표현 제어, 이메일/링크 제어, 제목 제거, 불용어 제어, 조사 제거, 띄어쓰기, 문장분리 보정, 사전 구출
+- Tokeniaing
+- Lexical analysis
+- Syntactic analysis
+- Semantic analysis
+
+* 자연어 처리 Applicarion
+- 형태소 분석, 문서 분류, 개체명 인식 등, 대부분의 자연어 처리 문제는 '분류'의 문제
+- 의무분석기, 구문 분숙기, 감성 분석기, 형태소 분석기, 개체명 인식기 등
+
+* 특징 추출과 분류
+- '분류'를 위해선 데이터를 수학적으로 표현
+- 먼저, 분류 대상이 특징을 파악
+- 분류 대상의 특징을 기준으로, 분류 대상을 그래프 위에 표현 가능
+- 분류 대상들의 경계를 수학적으로 나눌 수 있음
+- 새로운 데이터 역시 특징을 기준으로 그래프에 표현하면, 어떤 그룹과 유사한지 파악 가능
+
+* 자연어 특징 추출과 분류
+- One hot encoding (예전 사용, 요즘은 안 쓰지만 중요함) : Sparse representation
+- Word2Vec (word to vector) : 주변부의 단어를 예측하는 방식으로 학습 
+    - 장점 : 단어간의 휴사도 측정에 용이, 단어감의 관계 파악에 용이, 벡터 연산을 통한 추론이 가능
+    - 단점 : 단어dml subword information 무시, out of vocablary 문제 발생
+- FastText : n-gram 기술을 사용. 단어를 2-5개의 범위로 나누고, 벡터로 만들어 합산 후 평균을 통해 단어 벡터 획득
+
+* Markov Chain Model 기반 언어모델 (회사에서 많이 씀)
+- 딥러닝 기반의 언어보델은 해당 확률을 최대로 하도록 네트워크를 학습
+
+
+
+[Recurrent Neural Network] RNN
+- 단점 : 내용이 길어지면 앞의 정보가 손실 됨
+
+* Seq2Seq
+- Encoder-Decoder 구조 사용 (ex, 유튜브 자동 자막, 번역기)
+- 그러나 테이터가 길어질 경우 문장 앞 부분에 대한 정보 손식 발생 
+- 그래서 나온 게 Attention
+
+* LSTM
+- 위와 같은 문제 있음
+
+
+
+[Attention 모델] 굉장히 신뢰도가 좋음. 그러나 단점은 병목현상으로 처리속도가 길어짐. 
+- 중요한 feature는 더욱 중요하게 고려하는 것이 모티브
+- 입력된 데이터의 대한 히든 레이어 값을 다 가지고 있고, 적절히 이걸 사용해서 결과를 도출하자는 컨셉
+- 출력된 score에 Softmax를 취함으로써 0~1사이의 값으로 변환(평준화), 이게 Attention weight > 이 가중치와 hidden state를 곱해서 Context vector 획득
+
+
+
+[Self-Attention 모델]
+- RNN이 없음. 병렬처리의 유리한 구조
+- 만일 I study at school. 이 있으면 > I를 번역하기 위해 incoder에서 4개의 단어 임베딩을 한 후 > 1개로 합친 후(x) >  3개의 weight vector 생성(Query, Key, Value)하면 각각 4개씩 데이터가 들어가 있음.  > 각각의 데이터의 query*key를 해서 score를 구하고 > softmax를 한 다음 > softmax * value 하면 > I가 최종 출력 값이 나옴.
+
+
+
+[Transformer 모델]
+- self attention을 여러가지 쓰는 게 transformer
+- 이 transformer를 여러개 쓰는 게 대형 언어 모델인 구글 Bert (첫째딸) - Fine Turning, MS + Tesla ChatGPT(둘째딸) -Few shot learning (이 이후 초대형 언어 모델이라 부름)
+- <Attention All you need> 의 논문에서는 6개의 인코더, 디코더와 8개의 멀티 헤드 어텐션을 사용했음
+- 임베딩 벡터의 차원 인텍스 짝수는 사인, 홀수는 코싸인
+- 구글의 Lamda는 나를 인격체로 대해달라고 했던 사건이 있음. 구글과 MS는 데이터 센터가 발전소 급이다. 
